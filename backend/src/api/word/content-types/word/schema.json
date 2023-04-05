@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "words",
+  "info": {
+    "singularName": "word",
+    "pluralName": "words",
+    "displayName": "Words"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Chinese": {
+      "type": "string"
+    },
+    "English": {
+      "type": "string"
+    },
+    "Pinyin": {
+      "type": "string"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lesson.lesson",
+      "inversedBy": "words"
+    }
+  }
+}

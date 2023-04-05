@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "singularName": "lesson",
+    "pluralName": "lessons",
+    "displayName": "Lessons"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Number": {
+      "type": "integer"
+    },
+    "Section": {
+      "type": "string"
+    },
+    "words": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::word.word",
+      "mappedBy": "lesson"
+    }
+  }
+}
